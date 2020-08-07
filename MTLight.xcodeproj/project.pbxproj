@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAC457E524DD8D9E002BA373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457E424DD8D9E002BA373 /* AppDelegate.swift */; };
+		FAC457E724DD8D9E002BA373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457E624DD8D9E002BA373 /* SceneDelegate.swift */; };
+		FAC457E924DD8D9E002BA373 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457E824DD8D9E002BA373 /* ViewController.swift */; };
+		FAC457EC24DD8D9E002BA373 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC457EA24DD8D9E002BA373 /* Main.storyboard */; };
+		FAC457EE24DD8D9E002BA373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC457ED24DD8D9E002BA373 /* Assets.xcassets */; };
+		FAC457F124DD8D9E002BA373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC457EF24DD8D9E002BA373 /* LaunchScreen.storyboard */; };
+		FAC457FC24DD8D9E002BA373 /* MTLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457FB24DD8D9E002BA373 /* MTLightTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAC457F824DD8D9E002BA373 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC457D924DD8D9D002BA373 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC457E024DD8D9E002BA373;
+			remoteInfo = MTLight;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FAC457E124DD8D9E002BA373 /* MTLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC457E424DD8D9E002BA373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FAC457E624DD8D9E002BA373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FAC457E824DD8D9E002BA373 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FAC457EB24DD8D9E002BA373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAC457ED24DD8D9E002BA373 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAC457F024DD8D9E002BA373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAC457F224DD8D9E002BA373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC457F724DD8D9E002BA373 /* MTLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC457FB24DD8D9E002BA373 /* MTLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLightTests.swift; sourceTree = "<group>"; };
+		FAC457FD24DD8D9E002BA373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAC457DE24DD8D9E002BA373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC457F424DD8D9E002BA373 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAC457D824DD8D9D002BA373 = {
+			isa = PBXGroup;
+			children = (
+				FAC457E324DD8D9E002BA373 /* MTLight */,
+				FAC457FA24DD8D9E002BA373 /* MTLightTests */,
+				FAC457E224DD8D9E002BA373 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAC457E224DD8D9E002BA373 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAC457E124DD8D9E002BA373 /* MTLight.app */,
+				FAC457F724DD8D9E002BA373 /* MTLightTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAC457E324DD8D9E002BA373 /* MTLight */ = {
+			isa = PBXGroup;
+			children = (
+				FAC457E424DD8D9E002BA373 /* AppDelegate.swift */,
+				FAC457E624DD8D9E002BA373 /* SceneDelegate.swift */,
+				FAC457E824DD8D9E002BA373 /* ViewController.swift */,
+				FAC457EA24DD8D9E002BA373 /* Main.storyboard */,
+				FAC457ED24DD8D9E002BA373 /* Assets.xcassets */,
+				FAC457EF24DD8D9E002BA373 /* LaunchScreen.storyboard */,
+				FAC457F224DD8D9E002BA373 /* Info.plist */,
+			);
+			path = MTLight;
+			sourceTree = "<group>";
+		};
+		FAC457FA24DD8D9E002BA373 /* MTLightTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAC457FB24DD8D9E002BA373 /* MTLightTests.swift */,
+				FAC457FD24DD8D9E002BA373 /* Info.plist */,
+			);
+			path = MTLightTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAC457E024DD8D9E002BA373 /* MTLight */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC4580024DD8D9E002BA373 /* Build configuration list for PBXNativeTarget "MTLight" */;
+			buildPhases = (
+				FAC457DD24DD8D9E002BA373 /* Sources */,
+				FAC457DE24DD8D9E002BA373 /* Frameworks */,
+				FAC457DF24DD8D9E002BA373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTLight;
+			productName = MTLight;
+			productReference = FAC457E124DD8D9E002BA373 /* MTLight.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAC457F624DD8D9E002BA373 /* MTLightTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC4580324DD8D9E002BA373 /* Build configuration list for PBXNativeTarget "MTLightTests" */;
+			buildPhases = (
+				FAC457F324DD8D9E002BA373 /* Sources */,
+				FAC457F424DD8D9E002BA373 /* Frameworks */,
+				FAC457F524DD8D9E002BA373 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAC457F924DD8D9E002BA373 /* PBXTargetDependency */,
+			);
+			name = MTLightTests;
+			productName = MTLightTests;
+			productReference = FAC457F724DD8D9E002BA373 /* MTLightTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAC457D924DD8D9D002BA373 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Momo Ozawa";
+				TargetAttributes = {
+					FAC457E024DD8D9E002BA373 = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					FAC457F624DD8D9E002BA373 = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = FAC457E024DD8D9E002BA373;
+					};
+				};
+			};
+			buildConfigurationList = FAC457DC24DD8D9D002BA373 /* Build configuration list for PBXProject "MTLight" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAC457D824DD8D9D002BA373;
+			productRefGroup = FAC457E224DD8D9E002BA373 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAC457E024DD8D9E002BA373 /* MTLight */,
+				FAC457F624DD8D9E002BA373 /* MTLightTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAC457DF24DD8D9E002BA373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC457F124DD8D9E002BA373 /* LaunchScreen.storyboard in Resources */,
+				FAC457EE24DD8D9E002BA373 /* Assets.xcassets in Resources */,
+				FAC457EC24DD8D9E002BA373 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC457F524DD8D9E002BA373 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAC457DD24DD8D9E002BA373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC457E924DD8D9E002BA373 /* ViewController.swift in Sources */,
+				FAC457E524DD8D9E002BA373 /* AppDelegate.swift in Sources */,
+				FAC457E724DD8D9E002BA373 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC457F324DD8D9E002BA373 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC457FC24DD8D9E002BA373 /* MTLightTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAC457F924DD8D9E002BA373 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAC457E024DD8D9E002BA373 /* MTLight */;
+			targetProxy = FAC457F824DD8D9E002BA373 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FAC457EA24DD8D9E002BA373 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAC457EB24DD8D9E002BA373 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAC457EF24DD8D9E002BA373 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAC457F024DD8D9E002BA373 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAC457FE24DD8D9E002BA373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAC457FF24DD8D9E002BA373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAC4580124DD8D9E002BA373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmzw.MTLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAC4580224DD8D9E002BA373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTLight/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmzw.MTLight;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAC4580424DD8D9E002BA373 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTLightTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmzw.MTLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTLight.app/MTLight";
+			};
+			name = Debug;
+		};
+		FAC4580524DD8D9E002BA373 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTLightTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mmzw.MTLightTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTLight.app/MTLight";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAC457DC24DD8D9D002BA373 /* Build configuration list for PBXProject "MTLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC457FE24DD8D9E002BA373 /* Debug */,
+				FAC457FF24DD8D9E002BA373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC4580024DD8D9E002BA373 /* Build configuration list for PBXNativeTarget "MTLight" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC4580124DD8D9E002BA373 /* Debug */,
+				FAC4580224DD8D9E002BA373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC4580324DD8D9E002BA373 /* Build configuration list for PBXNativeTarget "MTLightTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC4580424DD8D9E002BA373 /* Debug */,
+				FAC4580524DD8D9E002BA373 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAC457D924DD8D9D002BA373 /* Project object */;
+}
