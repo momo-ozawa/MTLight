@@ -15,6 +15,8 @@
 		FAC4580824DD8ED3002BA373 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4580724DD8ED3002BA373 /* AccountsViewController.swift */; };
 		FAC4580A24DD8EDF002BA373 /* AccountsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC4580924DD8EDF002BA373 /* AccountsStoryboard.storyboard */; };
 		FAC4580E24DD8F05002BA373 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4580D24DD8F05002BA373 /* AccountsViewModel.swift */; };
+		FAC4581124DD900F002BA373 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4581024DD900F002BA373 /* Injectable.swift */; };
+		FAC4581324DD9019002BA373 /* StoryboardInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4581224DD9019002BA373 /* StoryboardInstantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		FAC4580724DD8ED3002BA373 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		FAC4580924DD8EDF002BA373 /* AccountsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountsStoryboard.storyboard; sourceTree = "<group>"; };
 		FAC4580D24DD8F05002BA373 /* AccountsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModel.swift; sourceTree = "<group>"; };
+		FAC4581024DD900F002BA373 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		FAC4581224DD9019002BA373 /* StoryboardInstantiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardInstantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,7 @@
 				FAC457F224DD8D9E002BA373 /* Info.plist */,
 				FAC4580F24DD8F0A002BA373 /* ViewModels */,
 				FAC4580C24DD8EF2002BA373 /* ViewControllers */,
+				FAC4581424DD901E002BA373 /* Protocols */,
 				FAC4580624DD8E6D002BA373 /* Resources */,
 			);
 			path = MTLight;
@@ -132,6 +137,15 @@
 				FAC4580D24DD8F05002BA373 /* AccountsViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		FAC4581424DD901E002BA373 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FAC4581024DD900F002BA373 /* Injectable.swift */,
+				FAC4581224DD9019002BA373 /* StoryboardInstantiable.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +252,8 @@
 				FAC457E524DD8D9E002BA373 /* AppDelegate.swift in Sources */,
 				FAC4580824DD8ED3002BA373 /* AccountsViewController.swift in Sources */,
 				FAC4580E24DD8F05002BA373 /* AccountsViewModel.swift in Sources */,
+				FAC4581124DD900F002BA373 /* Injectable.swift in Sources */,
+				FAC4581324DD9019002BA373 /* StoryboardInstantiable.swift in Sources */,
 				FAC457E724DD8D9E002BA373 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
