@@ -1,2 +1,5 @@
-/* Title for balances screen */
+/* Title for accounts screen */
 "Balances" = "Balances";
+
+/* Header title for accounts table header view */
+"Total Balance" = "Total Balance";

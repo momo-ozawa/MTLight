@@ -12,7 +12,13 @@ import RxSwift
 import UIKit
 
 final class AccountsViewController: UIViewController {
+    
+    private enum Constants {
+        static let HeaderHeightMultiplier: CGFloat = 1 / 5
+    }
 
+    @IBOutlet weak var headerTitleLabel: UILabel!
+    @IBOutlet weak var totalBalanceLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     private let disposeBag = DisposeBag()
@@ -22,7 +28,7 @@ final class AccountsViewController: UIViewController {
         configureCell: { (_, tableView, indexPath, account) in
             let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell")!
             cell.textLabel?.text = account.nickname
-            cell.detailTextLabel?.text = "JPY\(account.currentBalanceInBase)"
+            cell.detailTextLabel?.text = account.formattedCurrentBalance
             return cell
         },
         titleForHeaderInSection: { dataSource, sectionIndex in
@@ -45,6 +51,14 @@ final class AccountsViewController: UIViewController {
     
     func setupUI() {
         self.title = L10n.balances
+        
+        headerTitleLabel.text = L10n.totalBalance
+        
+        // Adjust table header view height
+        guard let headerView = tableView.tableHeaderView else { return }
+        headerView.frame.size.height = tableView.frame.size.height * Constants.HeaderHeightMultiplier
+        tableView.layoutIfNeeded()
+
     }
     
     func bindUI() {
@@ -53,6 +67,10 @@ final class AccountsViewController: UIViewController {
             .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
+        viewModel.totalBalance
+            .drive(totalBalanceLabel.rx.text)
+            .disposed(by: disposeBag)
+
         viewModel.accountsError
             .subscribe(onNext: { [weak self] error in
                 guard let self = self else { return }

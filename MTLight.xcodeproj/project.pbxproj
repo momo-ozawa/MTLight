@@ -41,6 +41,7 @@
 		FAFA322D24DD92F1002A4A08 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA322A24DD92F1002A4A08 /* L10n.swift */; };
 		FAFA322E24DD92F1002A4A08 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA322B24DD92F1002A4A08 /* Asset.swift */; };
 		FAFA323124DD931A002A4A08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAFA323024DD931A002A4A08 /* Localizable.strings */; };
+		FAFEF41824DE0B6500CE388E /* Double+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF41724DE0B6500CE388E /* Double+Currency.swift */; };
 		FEE8A591AF367381EA944DA6 /* Pods_MTLightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D42EE9EF042B20A029EAD8 /* Pods_MTLightTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -100,6 +101,7 @@
 		FAFA322A24DD92F1002A4A08 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
 		FAFA322B24DD92F1002A4A08 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		FAFA323024DD931A002A4A08 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		FAFEF41724DE0B6500CE388E /* Double+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +242,7 @@
 				FA5E437924DE036900DE31BC /* Models */,
 				FAC4580F24DD8F0A002BA373 /* ViewModels */,
 				FAC4580C24DD8EF2002BA373 /* ViewControllers */,
+				FAFEF41924DE0B6A00CE388E /* Extensions */,
 				FAC4581424DD901E002BA373 /* Protocols */,
 				FAC4580624DD8E6D002BA373 /* Resources */,
 			);
@@ -320,6 +323,14 @@
 				FAFA323024DD931A002A4A08 /* Localizable.strings */,
 			);
 			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		FAFEF41924DE0B6A00CE388E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FAFEF41724DE0B6500CE388E /* Double+Currency.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -525,6 +536,7 @@
 				FAC457E524DD8D9E002BA373 /* AppDelegate.swift in Sources */,
 				FA5E439024DE07C600DE31BC /* TransactionsWireframe.swift in Sources */,
 				FAC4580824DD8ED3002BA373 /* AccountsViewController.swift in Sources */,
+				FAFEF41824DE0B6500CE388E /* Double+Currency.swift in Sources */,
 				FA5E438B24DE06F100DE31BC /* Transactions.swift in Sources */,
 				FAC4580E24DD8F05002BA373 /* AccountsViewModel.swift in Sources */,
 				FAC4581124DD900F002BA373 /* Injectable.swift in Sources */,

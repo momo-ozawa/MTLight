@@ -15,12 +15,12 @@ typealias AccountSection = SectionModel<String, Account>
 
 class AccountsViewModel {
         
+    let totalBalance: Driver<String>
     let accounts: Driver<[AccountSection]>
     let accountsError: Observable<MTError>
     
     private let disposeBag = DisposeBag()
 
-    
     init(
         accountSelected: Signal<Account>,
         service: MTServiceProtocol,
@@ -32,13 +32,24 @@ class AccountsViewModel {
             .materialize()
             .share(replay: 1)
         
+        totalBalance = result
+            .compactMap { $0.element }
+            .map {
+                let accounts = $0.accounts
+                let balances = accounts.map { $0.currentBalanceInBase }
+                let totalBalance = balances.reduce(0.0, +)
+                return totalBalance.toLocaleCurrency(currencyCode: "JPY")
+            }
+            .asDriver(onErrorJustReturn: 0.0.toLocaleCurrency(currencyCode: "JPY"))
+
         accounts = result
             .compactMap { $0.element }
             .map {
                 let accounts = $0.accounts
                 let dictionary = Dictionary(grouping: accounts, by: { $0.institution })
                 let sections = dictionary.map { AccountSection(model: $0.key, items: $0.value) }
-                return sections
+                let sortedSections = sections.sorted { $0.model < $1.model }
+                return sortedSections
             }
             .asDriver(onErrorJustReturn: [])
 

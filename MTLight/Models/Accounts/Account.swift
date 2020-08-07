@@ -15,4 +15,8 @@ struct Account: Decodable {
     let currency: String
     let currentBalance: Double
     let currentBalanceInBase: Double
+    
+    var formattedCurrentBalance: String {
+        return currentBalance.toLocaleCurrency(currencyCode: currency)
+    }
 }
