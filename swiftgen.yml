@@ -1,0 +1,21 @@
+output_dir: MTLight/Resources/Generated/
+
+storyboards:
+  inputs: MTLight/
+  outputs:
+    - templateName: scenes-swift5
+      output: Storyboards.swift
+
+strings:
+  inputs: MTLight/Resources/en.lproj
+  filter: .+\.strings$
+  outputs:
+    - templateName: structured-swift5
+      output: L10n.swift
+
+xcassets:
+  inputs:
+   - MTLight/Resources/Assets.xcassets
+  outputs:
+        templateName: swift5
+        output: Asset.swift
