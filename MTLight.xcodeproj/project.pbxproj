@@ -13,6 +13,10 @@
 		FA5E436324DDA0B100DE31BC /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5E435C24DDA0B100DE31BC /* RxSwift.framework */; };
 		FA5E436524DDA0B100DE31BC /* Differentiator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5E435D24DDA0B100DE31BC /* Differentiator.framework */; };
 		FA5E436724DDA0B100DE31BC /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5E435E24DDA0B100DE31BC /* RxRelay.framework */; };
+		FA5E437224DDA22800DE31BC /* transactions_1.json in Resources */ = {isa = PBXBuildFile; fileRef = FA5E436E24DDA22800DE31BC /* transactions_1.json */; };
+		FA5E437324DDA22800DE31BC /* transactions_3.json in Resources */ = {isa = PBXBuildFile; fileRef = FA5E436F24DDA22800DE31BC /* transactions_3.json */; };
+		FA5E437424DDA22800DE31BC /* transactions_2.json in Resources */ = {isa = PBXBuildFile; fileRef = FA5E437024DDA22800DE31BC /* transactions_2.json */; };
+		FA5E437524DDA22800DE31BC /* accounts.json in Resources */ = {isa = PBXBuildFile; fileRef = FA5E437124DDA22800DE31BC /* accounts.json */; };
 		FAC457E524DD8D9E002BA373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457E424DD8D9E002BA373 /* AppDelegate.swift */; };
 		FAC457E724DD8D9E002BA373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457E624DD8D9E002BA373 /* SceneDelegate.swift */; };
 		FAC457EE24DD8D9E002BA373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC457ED24DD8D9E002BA373 /* Assets.xcassets */; };
@@ -54,6 +58,10 @@
 		FA5E435E24DDA0B100DE31BC /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/iOS/RxRelay.framework; sourceTree = "<group>"; };
 		FA5E436A24DDA0D000DE31BC /* input.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = input.xcfilelist; sourceTree = "<group>"; };
 		FA5E436B24DDA0DA00DE31BC /* output.xcfilelist */ = {isa = PBXFileReference; lastKnownFileType = text.xcfilelist; path = output.xcfilelist; sourceTree = "<group>"; };
+		FA5E436E24DDA22800DE31BC /* transactions_1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions_1.json; sourceTree = "<group>"; };
+		FA5E436F24DDA22800DE31BC /* transactions_3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions_3.json; sourceTree = "<group>"; };
+		FA5E437024DDA22800DE31BC /* transactions_2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = transactions_2.json; sourceTree = "<group>"; };
+		FA5E437124DDA22800DE31BC /* accounts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = accounts.json; sourceTree = "<group>"; };
 		FAC457E124DD8D9E002BA373 /* MTLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC457E424DD8D9E002BA373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC457E624DD8D9E002BA373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +132,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA5E437624DDA22D00DE31BC /* json */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E437124DDA22800DE31BC /* accounts.json */,
+				FA5E436E24DDA22800DE31BC /* transactions_1.json */,
+				FA5E437024DDA22800DE31BC /* transactions_2.json */,
+				FA5E436F24DDA22800DE31BC /* transactions_3.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
 		FAC457D824DD8D9D002BA373 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +193,7 @@
 			children = (
 				FAFA322F24DD92FA002A4A08 /* Generated */,
 				FAFA323224DD9321002A4A08 /* en.lproj */,
+				FA5E437624DDA22D00DE31BC /* json */,
 				FAC457ED24DD8D9E002BA373 /* Assets.xcassets */,
 				FAC457EF24DD8D9E002BA373 /* LaunchScreen.storyboard */,
 			);
@@ -317,9 +337,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5E437324DDA22800DE31BC /* transactions_3.json in Resources */,
+				FA5E437424DDA22800DE31BC /* transactions_2.json in Resources */,
 				FAC4580A24DD8EDF002BA373 /* AccountsStoryboard.storyboard in Resources */,
 				FAFA323124DD931A002A4A08 /* Localizable.strings in Resources */,
 				FAC457F124DD8D9E002BA373 /* LaunchScreen.storyboard in Resources */,
+				FA5E437524DDA22800DE31BC /* accounts.json in Resources */,
+				FA5E437224DDA22800DE31BC /* transactions_1.json in Resources */,
 				FAC457EE24DD8D9E002BA373 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
