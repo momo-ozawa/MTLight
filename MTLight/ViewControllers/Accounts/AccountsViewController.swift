@@ -33,8 +33,12 @@ final class AccountsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewModel = AccountsViewModel(service: MTService.shared)
-        
+        viewModel = AccountsViewModel(
+            accountSelected: tableView.rx.modelSelected(Account.self).asSignal(),
+            service: MTService.shared,
+            wireframe: AccountsWireframe(for: self)
+        )
+
         setupUI()
         bindUI()
     }

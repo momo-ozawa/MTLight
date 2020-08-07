@@ -20,6 +20,13 @@
 		FA5E437824DE036500DE31BC /* Accounts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E437724DE036500DE31BC /* Accounts.swift */; };
 		FA5E437D24DE03A300DE31BC /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E437C24DE03A300DE31BC /* Account.swift */; };
 		FA5E437F24DE044C00DE31BC /* MTService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E437E24DE044C00DE31BC /* MTService.swift */; };
+		FA5E438224DE067200DE31BC /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E438124DE067200DE31BC /* TransactionsViewModel.swift */; };
+		FA5E438424DE067E00DE31BC /* TransactionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E438324DE067E00DE31BC /* TransactionsViewController.swift */; };
+		FA5E438724DE068E00DE31BC /* TransactionsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5E438624DE068E00DE31BC /* TransactionsStoryboard.storyboard */; };
+		FA5E438924DE06EA00DE31BC /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E438824DE06EA00DE31BC /* Transaction.swift */; };
+		FA5E438B24DE06F100DE31BC /* Transactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E438A24DE06F100DE31BC /* Transactions.swift */; };
+		FA5E438E24DE079D00DE31BC /* AccountsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E438D24DE079D00DE31BC /* AccountsWireframe.swift */; };
+		FA5E439024DE07C600DE31BC /* TransactionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E438F24DE07C500DE31BC /* TransactionsWireframe.swift */; };
 		FAC457E524DD8D9E002BA373 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457E424DD8D9E002BA373 /* AppDelegate.swift */; };
 		FAC457E724DD8D9E002BA373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457E624DD8D9E002BA373 /* SceneDelegate.swift */; };
 		FAC457EE24DD8D9E002BA373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC457ED24DD8D9E002BA373 /* Assets.xcassets */; };
@@ -68,6 +75,13 @@
 		FA5E437724DE036500DE31BC /* Accounts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accounts.swift; sourceTree = "<group>"; };
 		FA5E437C24DE03A300DE31BC /* Account.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
 		FA5E437E24DE044C00DE31BC /* MTService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTService.swift; sourceTree = "<group>"; };
+		FA5E438124DE067200DE31BC /* TransactionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
+		FA5E438324DE067E00DE31BC /* TransactionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewController.swift; sourceTree = "<group>"; };
+		FA5E438624DE068E00DE31BC /* TransactionsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionsStoryboard.storyboard; sourceTree = "<group>"; };
+		FA5E438824DE06EA00DE31BC /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		FA5E438A24DE06F100DE31BC /* Transactions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transactions.swift; sourceTree = "<group>"; };
+		FA5E438D24DE079D00DE31BC /* AccountsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsWireframe.swift; sourceTree = "<group>"; };
+		FA5E438F24DE07C500DE31BC /* TransactionsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsWireframe.swift; sourceTree = "<group>"; };
 		FAC457E124DD8D9E002BA373 /* MTLight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTLight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC457E424DD8D9E002BA373 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAC457E624DD8D9E002BA373 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				FA5E437A24DE037000DE31BC /* Accounts */,
+				FA5E438C24DE06F600DE31BC /* Transactions */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,6 +187,25 @@
 				FA5E437E24DE044C00DE31BC /* MTService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		FA5E438524DE068200DE31BC /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E438624DE068E00DE31BC /* TransactionsStoryboard.storyboard */,
+				FA5E438324DE067E00DE31BC /* TransactionsViewController.swift */,
+				FA5E438F24DE07C500DE31BC /* TransactionsWireframe.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		FA5E438C24DE06F600DE31BC /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				FA5E438824DE06EA00DE31BC /* Transaction.swift */,
+				FA5E438A24DE06F100DE31BC /* Transactions.swift */,
+			);
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 		FAC457D824DD8D9D002BA373 = {
@@ -238,6 +272,7 @@
 			children = (
 				FAC4580924DD8EDF002BA373 /* AccountsStoryboard.storyboard */,
 				FAC4580724DD8ED3002BA373 /* AccountsViewController.swift */,
+				FA5E438D24DE079D00DE31BC /* AccountsWireframe.swift */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -246,6 +281,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC4580B24DD8EE9002BA373 /* Accounts */,
+				FA5E438524DE068200DE31BC /* Transactions */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -254,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC4580D24DD8F05002BA373 /* AccountsViewModel.swift */,
+				FA5E438124DE067200DE31BC /* TransactionsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -372,6 +409,7 @@
 			files = (
 				FA5E437324DDA22800DE31BC /* transactions_3.json in Resources */,
 				FA5E437424DDA22800DE31BC /* transactions_2.json in Resources */,
+				FA5E438724DE068E00DE31BC /* TransactionsStoryboard.storyboard in Resources */,
 				FAC4580A24DD8EDF002BA373 /* AccountsStoryboard.storyboard in Resources */,
 				FAFA323124DD931A002A4A08 /* Localizable.strings in Resources */,
 				FAC457F124DD8D9E002BA373 /* LaunchScreen.storyboard in Resources */,
@@ -480,18 +518,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5E438424DE067E00DE31BC /* TransactionsViewController.swift in Sources */,
 				FAFA322E24DD92F1002A4A08 /* Asset.swift in Sources */,
 				FA5E437D24DE03A300DE31BC /* Account.swift in Sources */,
 				FAFA322D24DD92F1002A4A08 /* L10n.swift in Sources */,
 				FAC457E524DD8D9E002BA373 /* AppDelegate.swift in Sources */,
+				FA5E439024DE07C600DE31BC /* TransactionsWireframe.swift in Sources */,
 				FAC4580824DD8ED3002BA373 /* AccountsViewController.swift in Sources */,
+				FA5E438B24DE06F100DE31BC /* Transactions.swift in Sources */,
 				FAC4580E24DD8F05002BA373 /* AccountsViewModel.swift in Sources */,
 				FAC4581124DD900F002BA373 /* Injectable.swift in Sources */,
 				FAC4581324DD9019002BA373 /* StoryboardInstantiable.swift in Sources */,
+				FA5E438224DE067200DE31BC /* TransactionsViewModel.swift in Sources */,
 				FA5E437F24DE044C00DE31BC /* MTService.swift in Sources */,
 				FA5E437824DE036500DE31BC /* Accounts.swift in Sources */,
 				FAC457E724DD8D9E002BA373 /* SceneDelegate.swift in Sources */,
 				FAFA322C24DD92F1002A4A08 /* Storyboards.swift in Sources */,
+				FA5E438E24DE079D00DE31BC /* AccountsWireframe.swift in Sources */,
+				FA5E438924DE06EA00DE31BC /* Transaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

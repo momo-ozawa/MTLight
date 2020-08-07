@@ -22,6 +22,11 @@ internal enum StoryboardScene {
 
     internal static let initialScene = InitialSceneType<UIKit.UIViewController>(storyboard: LaunchScreen.self)
   }
+  internal enum TransactionsStoryboard: StoryboardType {
+    internal static let storyboardName = "TransactionsStoryboard"
+
+    internal static let initialScene = InitialSceneType<MTLight.TransactionsViewController>(storyboard: TransactionsStoryboard.self)
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name
 

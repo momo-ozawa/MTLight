@@ -21,12 +21,15 @@ class AccountsViewModel {
     private let disposeBag = DisposeBag()
 
     
-    init(service: MTServiceProtocol) {
+    init(
+        accountSelected: Signal<Account>,
+        service: MTServiceProtocol,
+        wireframe: AccountsWireframeProtocol
+    ) {
         
         let result = service
             .getAccounts()
             .materialize()
-            .observeOn(MainScheduler.instance)
             .share(replay: 1)
         
         accounts = result
@@ -41,6 +44,13 @@ class AccountsViewModel {
 
         accountsError = result
             .compactMap { $0.error as? MTError }
+            .observeOn(MainScheduler.instance)
+        
+        accountSelected
+            .emit(onNext: { account in
+                wireframe.routeToTransactions(with: account.id)
+            })
+            .disposed(by: disposeBag)
 
     }
     
