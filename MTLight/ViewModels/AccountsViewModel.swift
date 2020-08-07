@@ -47,7 +47,9 @@ class AccountsViewModel {
             .map {
                 let accounts = $0.accounts
                 let dictionary = Dictionary(grouping: accounts, by: { $0.institution })
-                let sections = dictionary.map { AccountSection(model: $0.key, items: $0.value) }
+                let sections = dictionary.map {
+                    AccountSection(model: $0.key, items: $0.value.sorted())
+                }
                 let sortedSections = sections.sorted { $0.model < $1.model }
                 return sortedSections
             }

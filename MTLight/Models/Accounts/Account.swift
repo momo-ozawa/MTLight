@@ -20,3 +20,12 @@ struct Account: Decodable {
         return currentBalance.toLocaleCurrency(currencyCode: currency)
     }
 }
+
+extension Account: Comparable {
+    
+    static func < (lhs: Account, rhs: Account) -> Bool {
+        lhs.nickname.localizedCompare(rhs.nickname) == .orderedAscending
+    }
+    
+}
+
