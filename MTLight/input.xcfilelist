@@ -1,0 +1,11 @@
+#  input.xcfilelist
+#  MTLight
+#
+#  Created by Momo Ozawa on 2020/08/07.
+#  Copyright © 2020 Momo Ozawa. All rights reserved.
+
+$(SRCROOT)/Carthage/Build/iOS/Differentiator.framework
+$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework
+$(SRCROOT)/Carthage/Build/iOS/RxDataSources.framework
+$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework
+$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework
