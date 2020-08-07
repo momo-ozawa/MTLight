@@ -12,7 +12,14 @@ struct Transaction: Decodable {
     let accountId: Int
     let amount: Double
     let categoryId: Int
-    let date: String
+    let date: Date
     let description: String
     let id: Int
+    
+    var formattedDate: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd"
+        return dateFormatter.string(from: date)
+    }
+
 }

@@ -29,7 +29,7 @@ class TransactionsViewModel {
         
         transactions = result
             .compactMap { $0.element }
-            .map { $0.transactions }
+            .map { $0.transactions.sorted { $0.date > $1.date } }
             .asDriver(onErrorJustReturn: [])
 
         transactionsError = result

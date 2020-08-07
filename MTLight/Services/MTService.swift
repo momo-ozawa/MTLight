@@ -54,6 +54,7 @@ class MTService: MTServiceProtocol {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
+                decoder.dateDecodingStrategy = .iso8601
                 let jsonData = try decoder.decode(T.self, from: data)
                 observer.onNext(jsonData)
                 observer.onCompleted()

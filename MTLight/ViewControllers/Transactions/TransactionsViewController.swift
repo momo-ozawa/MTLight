@@ -24,7 +24,7 @@ final class TransactionsViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel = TransactionsViewModel(
-            transactionId: dependency.accountId,
+            transactionId: dependency.account.id,
             service: MTService.shared
         )
         
@@ -34,7 +34,7 @@ final class TransactionsViewController: UIViewController {
 
     
     func setupUI() {
-        // self.title = L10n.balances
+        self.title = dependency.account.institution
     }
     
     func bindUI() {
@@ -43,8 +43,8 @@ final class TransactionsViewController: UIViewController {
             .drive(
                 tableView.rx.items(cellIdentifier: "TransactionCell", cellType: UITableViewCell.self)
             ) { (_, transaction, cell) in
-                cell.textLabel?.text = transaction.description
-                cell.detailTextLabel?.text = "\(transaction.amount)"
+                cell.textLabel?.text = transaction.formattedDate
+                cell.detailTextLabel?.text = transaction.amount.toLocaleCurrency(currencyCode: self.dependency.account.currency)
         }
         .disposed(by: disposeBag)
         
@@ -76,7 +76,7 @@ extension TransactionsViewController: StoryboardInstantiatable {
     }
     
     struct Dependency {
-        let accountId: Int
+        let account: Account
     }
     
     func inject(_ dependency: Dependency) {

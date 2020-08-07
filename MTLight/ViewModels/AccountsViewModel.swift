@@ -59,7 +59,7 @@ class AccountsViewModel {
         
         accountSelected
             .emit(onNext: { account in
-                wireframe.routeToTransactions(with: account.id)
+                wireframe.routeToTransactions(with: account)
             })
             .disposed(by: disposeBag)
 

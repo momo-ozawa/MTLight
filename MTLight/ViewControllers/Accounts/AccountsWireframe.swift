@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AccountsWireframeProtocol {
-    func routeToTransactions(with accountId: Int)
+    func routeToTransactions(with accoun: Account)
 }
 
 final class AccountsWireframe: AccountsWireframeProtocol {
@@ -20,8 +20,8 @@ final class AccountsWireframe: AccountsWireframeProtocol {
         self.viewController = viewController
     }
     
-    func routeToTransactions(with accountId: Int) {
-        let dependency = TransactionsViewController.Dependency(accountId: accountId)
+    func routeToTransactions(with account: Account) {
+        let dependency = TransactionsViewController.Dependency(account: account)
         let destinationVC = TransactionsViewController.instantiate(with: dependency)
         self.viewController?.navigationController?.pushViewController(destinationVC, animated: true)
     }
