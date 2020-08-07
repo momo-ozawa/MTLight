@@ -18,6 +18,18 @@ final class AccountsViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private var viewModel: AccountsViewModel!
     
+    let dataSource = RxTableViewSectionedReloadDataSource<AccountSection>(
+        configureCell: { (_, tableView, indexPath, account) in
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell")!
+            cell.textLabel?.text = account.nickname
+            cell.detailTextLabel?.text = "JPY\(account.currentBalanceInBase)"
+            return cell
+        },
+        titleForHeaderInSection: { dataSource, sectionIndex in
+            return dataSource[sectionIndex].model
+        }
+    )
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,12 +46,7 @@ final class AccountsViewController: UIViewController {
     func bindUI() {
         
         viewModel.accounts
-            .drive(
-                tableView.rx.items(cellIdentifier: "AccountCell", cellType: UITableViewCell.self)
-            ) { (_, account, cell) in
-                cell.textLabel?.text = account.nickname
-                cell.detailTextLabel?.text = "\(account.currency)\(account.currentBalance)"
-            }
+            .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
         
         viewModel.accountsError
