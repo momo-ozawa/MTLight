@@ -9,7 +9,7 @@
 import UIKit
 
 protocol AccountsWireframeProtocol {
-    func routeToTransactions(with accoun: Account)
+    func routeToTransactions(with account: Account)
 }
 
 final class AccountsWireframe: AccountsWireframeProtocol {
