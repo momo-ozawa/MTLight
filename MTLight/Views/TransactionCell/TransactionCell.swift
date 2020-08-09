@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransactionCell: UITableViewCell, NibLoadable {
+final class TransactionCell: UITableViewCell, NibLoadable {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!

@@ -24,11 +24,11 @@ final class AccountsViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private var viewModel: AccountsViewModel!
     
-    let dataSource = RxTableViewSectionedReloadDataSource<AccountSection>(
+    private lazy var dataSource = RxTableViewSectionedReloadDataSource<AccountSection>(
         configureCell: { (_, tableView, indexPath, account) in
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell")!
-            cell.textLabel?.text = account.nickname
-            cell.detailTextLabel?.text = account.formattedCurrentBalance
+            let cell = tableView.dequeueReusableCell(AccountCell.self, for: indexPath)
+            cell.configure(with: account)
+
             return cell
         },
         titleForHeaderInSection: { dataSource, sectionIndex in
@@ -51,6 +51,8 @@ final class AccountsViewController: UIViewController {
     
     func setupUI() {
         self.title = L10n.balances
+        
+        tableView.register(AccountCell.self)
         
         headerTitleLabel.text = L10n.totalBalance
         

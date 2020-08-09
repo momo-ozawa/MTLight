@@ -33,7 +33,7 @@ final class TransactionsViewController: UIViewController {
             return cell
         },
         titleForHeaderInSection: { dataSource, sectionIndex in
-            self.sectionDateFormatter.string(from: dataSource[sectionIndex].model)
+            return self.sectionDateFormatter.string(from: dataSource[sectionIndex].model)
         }
     )
 

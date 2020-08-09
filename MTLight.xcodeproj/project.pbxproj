@@ -47,6 +47,8 @@
 		FAFEF41F24DFA14700CE388E /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF41E24DFA14700CE388E /* UITableView+Additions.swift */; };
 		FAFEF42224DFA23C00CE388E /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF42024DFA23C00CE388E /* TransactionCell.swift */; };
 		FAFEF42324DFA23C00CE388E /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFEF42124DFA23C00CE388E /* TransactionCell.xib */; };
+		FAFEF42824DFA55E00CE388E /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF42624DFA55E00CE388E /* AccountCell.swift */; };
+		FAFEF42924DFA55E00CE388E /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFEF42724DFA55E00CE388E /* AccountCell.xib */; };
 		FEE8A591AF367381EA944DA6 /* Pods_MTLightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D42EE9EF042B20A029EAD8 /* Pods_MTLightTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -112,6 +114,8 @@
 		FAFEF41E24DFA14700CE388E /* UITableView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
 		FAFEF42024DFA23C00CE388E /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		FAFEF42124DFA23C00CE388E /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
+		FAFEF42624DFA55E00CE388E /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		FAFEF42724DFA55E00CE388E /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -359,9 +363,19 @@
 		FAFEF42524DFA25400CE388E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FAFEF42A24DFA56100CE388E /* AccountCell */,
 				FAFEF42424DFA24800CE388E /* TransactionCell */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FAFEF42A24DFA56100CE388E /* AccountCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAFEF42724DFA55E00CE388E /* AccountCell.xib */,
+				FAFEF42624DFA55E00CE388E /* AccountCell.swift */,
+			);
+			path = AccountCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,6 +469,7 @@
 				FAC4580A24DD8EDF002BA373 /* AccountsStoryboard.storyboard in Resources */,
 				FAFEF42324DFA23C00CE388E /* TransactionCell.xib in Resources */,
 				FAFA323124DD931A002A4A08 /* Localizable.strings in Resources */,
+				FAFEF42924DFA55E00CE388E /* AccountCell.xib in Resources */,
 				FAC457F124DD8D9E002BA373 /* LaunchScreen.storyboard in Resources */,
 				FA5E437524DDA22800DE31BC /* accounts.json in Resources */,
 				FA5E437224DDA22800DE31BC /* transactions_1.json in Resources */,
@@ -578,6 +593,7 @@
 				FAC4581324DD9019002BA373 /* StoryboardInstantiable.swift in Sources */,
 				FA5E438224DE067200DE31BC /* TransactionsViewModel.swift in Sources */,
 				FA5E437F24DE044C00DE31BC /* MTService.swift in Sources */,
+				FAFEF42824DFA55E00CE388E /* AccountCell.swift in Sources */,
 				FA5E437824DE036500DE31BC /* Accounts.swift in Sources */,
 				FAC457E724DD8D9E002BA373 /* SceneDelegate.swift in Sources */,
 				FAFA322C24DD92F1002A4A08 /* Storyboards.swift in Sources */,
