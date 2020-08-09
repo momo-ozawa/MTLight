@@ -40,7 +40,7 @@ final class TransactionsViewController: UIViewController {
         super.viewDidLoad()
 
         viewModel = TransactionsViewModel(
-            transactionId: dependency.account.id,
+            accountId: dependency.account.id,
             service: MTService.shared,
             wireframe: TransactionsWireframe(for: self)
         )

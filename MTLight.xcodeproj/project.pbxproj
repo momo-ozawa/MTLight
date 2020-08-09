@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0F4337A7E9F597232AA6105E /* Pods_MTLight.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48B98E20FF01BD367C291F21 /* Pods_MTLight.framework */; };
+		FA06631424DFCD04007BB6F4 /* TransactionsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06631324DFCD04007BB6F4 /* TransactionsViewModelTests.swift */; };
+		FA06631624DFCE7E007BB6F4 /* MockTransactionsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06631524DFCE7E007BB6F4 /* MockTransactionsWireframe.swift */; };
+		FA06631824DFD3EC007BB6F4 /* Seeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA06631724DFD3EC007BB6F4 /* Seeds.swift */; };
 		FA5E435F24DDA0B100DE31BC /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5E435A24DDA0B100DE31BC /* RxCocoa.framework */; };
 		FA5E436124DDA0B100DE31BC /* RxDataSources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5E435B24DDA0B100DE31BC /* RxDataSources.framework */; };
 		FA5E436324DDA0B100DE31BC /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5E435C24DDA0B100DE31BC /* RxSwift.framework */; };
@@ -31,7 +34,6 @@
 		FAC457E724DD8D9E002BA373 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457E624DD8D9E002BA373 /* SceneDelegate.swift */; };
 		FAC457EE24DD8D9E002BA373 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC457ED24DD8D9E002BA373 /* Assets.xcassets */; };
 		FAC457F124DD8D9E002BA373 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC457EF24DD8D9E002BA373 /* LaunchScreen.storyboard */; };
-		FAC457FC24DD8D9E002BA373 /* MTLightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC457FB24DD8D9E002BA373 /* MTLightTests.swift */; };
 		FAC4580824DD8ED3002BA373 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4580724DD8ED3002BA373 /* AccountsViewController.swift */; };
 		FAC4580A24DD8EDF002BA373 /* AccountsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAC4580924DD8EDF002BA373 /* AccountsStoryboard.storyboard */; };
 		FAC4580E24DD8F05002BA373 /* AccountsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC4580D24DD8F05002BA373 /* AccountsViewModel.swift */; };
@@ -50,6 +52,13 @@
 		FAFEF42824DFA55E00CE388E /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF42624DFA55E00CE388E /* AccountCell.swift */; };
 		FAFEF42924DFA55E00CE388E /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFEF42724DFA55E00CE388E /* AccountCell.xib */; };
 		FAFEF42C24DFA81000CE388E /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF42B24DFA81000CE388E /* AlertDisplayable.swift */; };
+		FAFEF42E24DFAD8900CE388E /* AccountsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF42D24DFAD8900CE388E /* AccountsViewModelTests.swift */; };
+		FAFEF43624DFAE0600CE388E /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFEF42F24DFADE000CE388E /* RxBlocking.framework */; };
+		FAFEF43724DFAE1000CE388E /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFEF43024DFADE000CE388E /* RxTest.framework */; };
+		FAFEF43824DFAE2400CE388E /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5E435A24DDA0B100DE31BC /* RxCocoa.framework */; };
+		FAFEF43924DFAE2800CE388E /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA5E435C24DDA0B100DE31BC /* RxSwift.framework */; };
+		FAFEF43B24DFB21D00CE388E /* MockAccountsWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF43A24DFB21D00CE388E /* MockAccountsWireframe.swift */; };
+		FAFEF43D24DFB27300CE388E /* MockMTLightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF43C24DFB27300CE388E /* MockMTLightService.swift */; };
 		FEE8A591AF367381EA944DA6 /* Pods_MTLightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D42EE9EF042B20A029EAD8 /* Pods_MTLightTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +79,9 @@
 		9612511BDF6A6778AC76AEBB /* Pods-MTLight.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTLight.release.xcconfig"; path = "Target Support Files/Pods-MTLight/Pods-MTLight.release.xcconfig"; sourceTree = "<group>"; };
 		98A8789DFE3FFD2884A713AB /* Pods-MTLightTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTLightTests.release.xcconfig"; path = "Target Support Files/Pods-MTLightTests/Pods-MTLightTests.release.xcconfig"; sourceTree = "<group>"; };
 		98D42EE9EF042B20A029EAD8 /* Pods_MTLightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MTLightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA06631324DFCD04007BB6F4 /* TransactionsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsViewModelTests.swift; sourceTree = "<group>"; };
+		FA06631524DFCE7E007BB6F4 /* MockTransactionsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTransactionsWireframe.swift; sourceTree = "<group>"; };
+		FA06631724DFD3EC007BB6F4 /* Seeds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Seeds.swift; sourceTree = "<group>"; };
 		FA5E435A24DDA0B100DE31BC /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		FA5E435B24DDA0B100DE31BC /* RxDataSources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxDataSources.framework; path = Carthage/Build/iOS/RxDataSources.framework; sourceTree = "<group>"; };
 		FA5E435C24DDA0B100DE31BC /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
@@ -98,7 +110,6 @@
 		FAC457F024DD8D9E002BA373 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAC457F224DD8D9E002BA373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC457F724DD8D9E002BA373 /* MTLightTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTLightTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAC457FB24DD8D9E002BA373 /* MTLightTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTLightTests.swift; sourceTree = "<group>"; };
 		FAC457FD24DD8D9E002BA373 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAC4580724DD8ED3002BA373 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		FAC4580924DD8EDF002BA373 /* AccountsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AccountsStoryboard.storyboard; sourceTree = "<group>"; };
@@ -118,6 +129,11 @@
 		FAFEF42624DFA55E00CE388E /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		FAFEF42724DFA55E00CE388E /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
 		FAFEF42B24DFA81000CE388E /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
+		FAFEF42D24DFAD8900CE388E /* AccountsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewModelTests.swift; sourceTree = "<group>"; };
+		FAFEF42F24DFADE000CE388E /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		FAFEF43024DFADE000CE388E /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
+		FAFEF43A24DFB21D00CE388E /* MockAccountsWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAccountsWireframe.swift; sourceTree = "<group>"; };
+		FAFEF43C24DFB27300CE388E /* MockMTLightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMTLightService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +154,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFEF43924DFAE2800CE388E /* RxSwift.framework in Frameworks */,
+				FAFEF43824DFAE2400CE388E /* RxCocoa.framework in Frameworks */,
 				FEE8A591AF367381EA944DA6 /* Pods_MTLightTests.framework in Frameworks */,
+				FAFEF43624DFAE0600CE388E /* RxBlocking.framework in Frameworks */,
+				FAFEF43724DFAE1000CE388E /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +179,8 @@
 		4A86572CE1504AFF41B47AEE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAFEF42F24DFADE000CE388E /* RxBlocking.framework */,
+				FAFEF43024DFADE000CE388E /* RxTest.framework */,
 				FA5E435D24DDA0B100DE31BC /* Differentiator.framework */,
 				FA5E435A24DDA0B100DE31BC /* RxCocoa.framework */,
 				FA5E435B24DDA0B100DE31BC /* RxDataSources.framework */,
@@ -269,7 +291,12 @@
 		FAC457FA24DD8D9E002BA373 /* MTLightTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAC457FB24DD8D9E002BA373 /* MTLightTests.swift */,
+				FAFEF42D24DFAD8900CE388E /* AccountsViewModelTests.swift */,
+				FA06631324DFCD04007BB6F4 /* TransactionsViewModelTests.swift */,
+				FAFEF43C24DFB27300CE388E /* MockMTLightService.swift */,
+				FAFEF43A24DFB21D00CE388E /* MockAccountsWireframe.swift */,
+				FA06631524DFCE7E007BB6F4 /* MockTransactionsWireframe.swift */,
+				FA06631724DFD3EC007BB6F4 /* Seeds.swift */,
 				FAC457FD24DD8D9E002BA373 /* Info.plist */,
 			);
 			path = MTLightTests;
@@ -611,7 +638,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAC457FC24DD8D9E002BA373 /* MTLightTests.swift in Sources */,
+				FAFEF43B24DFB21D00CE388E /* MockAccountsWireframe.swift in Sources */,
+				FAFEF43D24DFB27300CE388E /* MockMTLightService.swift in Sources */,
+				FA06631824DFD3EC007BB6F4 /* Seeds.swift in Sources */,
+				FA06631424DFCD04007BB6F4 /* TransactionsViewModelTests.swift in Sources */,
+				FAFEF42E24DFAD8900CE388E /* AccountsViewModelTests.swift in Sources */,
+				FA06631624DFCE7E007BB6F4 /* MockTransactionsWireframe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -802,6 +834,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MTLightTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -824,6 +860,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MTLightTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (

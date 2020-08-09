@@ -22,7 +22,7 @@ class AccountsViewModel {
     private let disposeBag = DisposeBag()
 
     init(
-        accountSelected: Signal<Account>,
+        accountSelectedTap: Signal<Account>,
         service: MTServiceProtocol,
         wireframe: AccountsWireframeProtocol
     ) {
@@ -59,7 +59,7 @@ class AccountsViewModel {
             .compactMap { $0.error as? MTError }
             .observeOn(MainScheduler.instance)
         
-        accountSelected
+        accountSelectedTap
             .emit(onNext: { account in
                 wireframe.routeToTransactions(with: account)
             })

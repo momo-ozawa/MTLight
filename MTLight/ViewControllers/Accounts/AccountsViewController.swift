@@ -40,7 +40,7 @@ final class AccountsViewController: UIViewController {
         super.viewDidLoad()
         
         viewModel = AccountsViewModel(
-            accountSelected: tableView.rx.modelSelected(Account.self).asSignal(),
+            accountSelectedTap: tableView.rx.modelSelected(Account.self).asSignal(),
             service: MTService.shared,
             wireframe: AccountsWireframe(for: self)
         )

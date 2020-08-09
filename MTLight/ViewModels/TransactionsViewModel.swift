@@ -21,13 +21,13 @@ class TransactionsViewModel {
     let transactionsError: Observable<MTError>
     
     init(
-        transactionId: Int,
+        accountId: Int,
         service: MTServiceProtocol,
         wireframe: TransactionsWireframeProtocol
     ) {
         
         let result = service
-            .getTransactions(id: transactionId)
+            .getTransactions(id: accountId)
             .materialize()
             .share(replay: 1)
         
