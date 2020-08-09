@@ -18,7 +18,7 @@ class TransactionsViewModel {
     private let disposeBag = DisposeBag()
 
     let transactions: Driver<[TransactionSection]>
-    let transactionsError: Observable<MTError>
+    let transactionsError: Driver<MTError>
     
     init(
         accountId: Int,
@@ -46,7 +46,7 @@ class TransactionsViewModel {
 
         transactionsError = result
             .compactMap { $0.error as? MTError }
-            .observeOn(MainScheduler.instance)
+            .asDriver(onErrorDriveWith: Driver.never())
 
     }
 }

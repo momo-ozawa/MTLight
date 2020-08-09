@@ -17,7 +17,7 @@ class AccountsViewModel {
         
     let totalBalance: Driver<String>
     let accounts: Driver<[AccountSection]>
-    let accountsError: Observable<MTError>
+    let accountsError: Driver<MTError>
     
     private let disposeBag = DisposeBag()
 
@@ -54,10 +54,10 @@ class AccountsViewModel {
                 return sortedSections
             }
             .asDriver(onErrorJustReturn: [])
-
+        
         accountsError = result
             .compactMap { $0.error as? MTError }
-            .observeOn(MainScheduler.instance)
+            .asDriver(onErrorDriveWith: Driver.never())
         
         accountSelectedTap
             .emit(onNext: { account in

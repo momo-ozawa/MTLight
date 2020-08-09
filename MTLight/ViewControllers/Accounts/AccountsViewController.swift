@@ -78,7 +78,7 @@ final class AccountsViewController: UIViewController {
             .disposed(by: disposeBag)
 
         viewModel.accountsError
-            .subscribe(onNext: { [weak self] error in
+            .drive(onNext: { [weak self] error in
                 guard let self = self else { return }
                 self.showErrorAlert(error)
             })
