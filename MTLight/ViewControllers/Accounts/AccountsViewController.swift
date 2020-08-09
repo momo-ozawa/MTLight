@@ -56,8 +56,9 @@ final class AccountsViewController: UIViewController {
         // Register the account cell so we can dequeue it later
         tableView.register(AccountCell.self)
         
-        // Set the header view title
+        // Configure default values for the table header view
         headerTitleLabel.text = L10n.totalBalance
+        totalBalanceLabel.text = 0.0.toLocaleCurrency(currencyCode: L10n.jpy)
         
         // Adjust table header view height
         guard let headerView = tableView.tableHeaderView else { return }
@@ -83,17 +84,6 @@ final class AccountsViewController: UIViewController {
             })
             .disposed(by: disposeBag)
     }
-    
-    private func showErrorAlert(_ error: MTError) {
-        let alert = UIAlertController(
-            title: "Error",
-            message: error.message,
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        self.present(alert, animated: true, completion: nil)
-    }
-
 
 }
 
@@ -104,3 +94,5 @@ extension AccountsViewController: StoryboardInstantiatable {
     }
     
 }
+
+extension AccountsViewController: AlertDisplayable {}

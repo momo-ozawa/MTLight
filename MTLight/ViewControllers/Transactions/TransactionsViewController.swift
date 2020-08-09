@@ -72,16 +72,6 @@ final class TransactionsViewController: UIViewController {
             .disposed(by: disposeBag)
         
     }
-    
-    private func showErrorAlert(_ error: MTError) {
-        let alert = UIAlertController(
-            title: "Error",
-            message: error.message,
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        self.present(alert, animated: true, completion: nil)
-    }
 
 }
 
@@ -100,3 +90,5 @@ extension TransactionsViewController: StoryboardInstantiatable {
     }
 
 }
+
+extension TransactionsViewController: AlertDisplayable {}

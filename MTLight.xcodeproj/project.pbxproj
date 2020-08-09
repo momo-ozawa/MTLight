@@ -49,6 +49,7 @@
 		FAFEF42324DFA23C00CE388E /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFEF42124DFA23C00CE388E /* TransactionCell.xib */; };
 		FAFEF42824DFA55E00CE388E /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF42624DFA55E00CE388E /* AccountCell.swift */; };
 		FAFEF42924DFA55E00CE388E /* AccountCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFEF42724DFA55E00CE388E /* AccountCell.xib */; };
+		FAFEF42C24DFA81000CE388E /* AlertDisplayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF42B24DFA81000CE388E /* AlertDisplayable.swift */; };
 		FEE8A591AF367381EA944DA6 /* Pods_MTLightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D42EE9EF042B20A029EAD8 /* Pods_MTLightTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,6 +117,7 @@
 		FAFEF42124DFA23C00CE388E /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 		FAFEF42624DFA55E00CE388E /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		FAFEF42724DFA55E00CE388E /* AccountCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountCell.xib; sourceTree = "<group>"; };
+		FAFEF42B24DFA81000CE388E /* AlertDisplayable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDisplayable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,10 +318,11 @@
 		FAC4581424DD901E002BA373 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				FAFEF42B24DFA81000CE388E /* AlertDisplayable.swift */,
 				FAC4581024DD900F002BA373 /* Injectable.swift */,
+				FAFEF41C24DFA12900CE388E /* NibLoadable.swift */,
 				FAFEF41A24DFA11300CE388E /* Reusable.swift */,
 				FAC4581224DD9019002BA373 /* StoryboardInstantiable.swift */,
-				FAFEF41C24DFA12900CE388E /* NibLoadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -590,6 +593,7 @@
 				FAFEF42224DFA23C00CE388E /* TransactionCell.swift in Sources */,
 				FAC4580E24DD8F05002BA373 /* AccountsViewModel.swift in Sources */,
 				FAC4581124DD900F002BA373 /* Injectable.swift in Sources */,
+				FAFEF42C24DFA81000CE388E /* AlertDisplayable.swift in Sources */,
 				FAC4581324DD9019002BA373 /* StoryboardInstantiable.swift in Sources */,
 				FA5E438224DE067200DE31BC /* TransactionsViewModel.swift in Sources */,
 				FA5E437F24DE044C00DE31BC /* MTService.swift in Sources */,

@@ -18,3 +18,9 @@
 
 /* ISO currency code for Japanese Yen */
 "JPY" = "JPY";
+
+/* Error alert title */
+"Error" = "Error";
+
+/* OK button title */
+"OK" = "OK";
