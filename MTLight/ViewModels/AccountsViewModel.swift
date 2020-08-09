@@ -38,9 +38,9 @@ class AccountsViewModel {
                 let accounts = $0.accounts
                 let balances = accounts.map { $0.currentBalanceInBase }
                 let totalBalance = balances.reduce(0.0, +)
-                return totalBalance.toLocaleCurrency(currencyCode: "JPY")
+                return totalBalance.toLocaleCurrency(currencyCode: L10n.jpy)
             }
-            .asDriver(onErrorJustReturn: 0.0.toLocaleCurrency(currencyCode: "JPY"))
+            .asDriver(onErrorJustReturn: 0.0.toLocaleCurrency(currencyCode: L10n.jpy))
 
         accounts = result
             .compactMap { $0.element }

@@ -21,9 +21,9 @@ enum MTError: Error {
     var message: String {
         switch self {
         case .pathError:
-            return "Incorrect path error occurred"
+            return L10n.incorrectPathErrorOccurred
         case .decodeError:
-            return "Decoding error occurred"
+            return L10n.decodingErrorOccurred
         }
     }
 }

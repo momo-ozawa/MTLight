@@ -10,3 +10,11 @@
 /* Formatted date for transaction section */
 "MMMM yyyy" = "MMMM yyyy";
 
+/* Error message for MoneytreeError.pathError */
+"Incorrect path error occurred" = "Incorrect path error occurred";
+
+/* Error message for MoneytreeError.decodeError */
+"Decoding error occurred" = "Decoding error occurred";
+
+/* ISO currency code for Japanese Yen */
+"JPY" = "JPY";

@@ -14,6 +14,12 @@ internal enum L10n {
   internal static let balances = L10n.tr("Localizable", "Balances")
   /// d
   internal static let d = L10n.tr("Localizable", "d")
+  /// Decoding error occurred
+  internal static let decodingErrorOccurred = L10n.tr("Localizable", "Decoding error occurred")
+  /// Incorrect path error occurred
+  internal static let incorrectPathErrorOccurred = L10n.tr("Localizable", "Incorrect path error occurred")
+  /// JPY
+  internal static let jpy = L10n.tr("Localizable", "JPY")
   /// MMMM yyyy
   internal static let mmmmYyyy = L10n.tr("Localizable", "MMMM yyyy")
   /// Total Balance
