@@ -22,7 +22,8 @@ class TransactionsViewModel {
     
     init(
         transactionId: Int,
-        service: MTServiceProtocol
+        service: MTServiceProtocol,
+        wireframe: TransactionsWireframeProtocol
     ) {
         
         let result = service

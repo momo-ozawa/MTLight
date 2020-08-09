@@ -15,10 +15,9 @@ final class TransactionsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
 
-    var viewModel: TransactionsViewModel!
-    var dependency: Dependency!
-
     private let disposeBag = DisposeBag()
+    private var viewModel: TransactionsViewModel!
+    private var dependency: Dependency!
     
     private lazy var sectionDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
@@ -42,7 +41,8 @@ final class TransactionsViewController: UIViewController {
 
         viewModel = TransactionsViewModel(
             transactionId: dependency.account.id,
-            service: MTService.shared
+            service: MTService.shared,
+            wireframe: TransactionsWireframe(for: self)
         )
         
         setupUI()
@@ -51,7 +51,10 @@ final class TransactionsViewController: UIViewController {
 
     
     func setupUI() {
+        // Set the title for the accounts screen
         self.title = dependency.account.institution
+        
+        // Register the transaction cell so we can dequeue it later
         tableView.register(TransactionCell.self)
     }
     

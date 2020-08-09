@@ -50,10 +50,13 @@ final class AccountsViewController: UIViewController {
     }
     
     func setupUI() {
+        // Set the title for the balances screen
         self.title = L10n.balances
         
+        // Register the account cell so we can dequeue it later
         tableView.register(AccountCell.self)
         
+        // Set the header view title
         headerTitleLabel.text = L10n.totalBalance
         
         // Adjust table header view height
