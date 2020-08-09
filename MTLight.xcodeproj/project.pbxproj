@@ -42,6 +42,11 @@
 		FAFA322E24DD92F1002A4A08 /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFA322B24DD92F1002A4A08 /* Asset.swift */; };
 		FAFA323124DD931A002A4A08 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAFA323024DD931A002A4A08 /* Localizable.strings */; };
 		FAFEF41824DE0B6500CE388E /* Double+Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF41724DE0B6500CE388E /* Double+Currency.swift */; };
+		FAFEF41B24DFA11300CE388E /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF41A24DFA11300CE388E /* Reusable.swift */; };
+		FAFEF41D24DFA12900CE388E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF41C24DFA12900CE388E /* NibLoadable.swift */; };
+		FAFEF41F24DFA14700CE388E /* UITableView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF41E24DFA14700CE388E /* UITableView+Additions.swift */; };
+		FAFEF42224DFA23C00CE388E /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFEF42024DFA23C00CE388E /* TransactionCell.swift */; };
+		FAFEF42324DFA23C00CE388E /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAFEF42124DFA23C00CE388E /* TransactionCell.xib */; };
 		FEE8A591AF367381EA944DA6 /* Pods_MTLightTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98D42EE9EF042B20A029EAD8 /* Pods_MTLightTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -102,6 +107,11 @@
 		FAFA322B24DD92F1002A4A08 /* Asset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		FAFA323024DD931A002A4A08 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		FAFEF41724DE0B6500CE388E /* Double+Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Currency.swift"; sourceTree = "<group>"; };
+		FAFEF41A24DFA11300CE388E /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		FAFEF41C24DFA12900CE388E /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
+		FAFEF41E24DFA14700CE388E /* UITableView+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Additions.swift"; sourceTree = "<group>"; };
+		FAFEF42024DFA23C00CE388E /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
+		FAFEF42124DFA23C00CE388E /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +252,7 @@
 				FA5E437924DE036900DE31BC /* Models */,
 				FAC4580F24DD8F0A002BA373 /* ViewModels */,
 				FAC4580C24DD8EF2002BA373 /* ViewControllers */,
+				FAFEF42524DFA25400CE388E /* Views */,
 				FAFEF41924DE0B6A00CE388E /* Extensions */,
 				FAC4581424DD901E002BA373 /* Protocols */,
 				FAC4580624DD8E6D002BA373 /* Resources */,
@@ -302,7 +313,9 @@
 			isa = PBXGroup;
 			children = (
 				FAC4581024DD900F002BA373 /* Injectable.swift */,
+				FAFEF41A24DFA11300CE388E /* Reusable.swift */,
 				FAC4581224DD9019002BA373 /* StoryboardInstantiable.swift */,
+				FAFEF41C24DFA12900CE388E /* NibLoadable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -329,8 +342,26 @@
 			isa = PBXGroup;
 			children = (
 				FAFEF41724DE0B6500CE388E /* Double+Currency.swift */,
+				FAFEF41E24DFA14700CE388E /* UITableView+Additions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FAFEF42424DFA24800CE388E /* TransactionCell */ = {
+			isa = PBXGroup;
+			children = (
+				FAFEF42124DFA23C00CE388E /* TransactionCell.xib */,
+				FAFEF42024DFA23C00CE388E /* TransactionCell.swift */,
+			);
+			path = TransactionCell;
+			sourceTree = "<group>";
+		};
+		FAFEF42524DFA25400CE388E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FAFEF42424DFA24800CE388E /* TransactionCell */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -422,6 +453,7 @@
 				FA5E437424DDA22800DE31BC /* transactions_2.json in Resources */,
 				FA5E438724DE068E00DE31BC /* TransactionsStoryboard.storyboard in Resources */,
 				FAC4580A24DD8EDF002BA373 /* AccountsStoryboard.storyboard in Resources */,
+				FAFEF42324DFA23C00CE388E /* TransactionCell.xib in Resources */,
 				FAFA323124DD931A002A4A08 /* Localizable.strings in Resources */,
 				FAC457F124DD8D9E002BA373 /* LaunchScreen.storyboard in Resources */,
 				FA5E437524DDA22800DE31BC /* accounts.json in Resources */,
@@ -533,11 +565,14 @@
 				FAFA322E24DD92F1002A4A08 /* Asset.swift in Sources */,
 				FA5E437D24DE03A300DE31BC /* Account.swift in Sources */,
 				FAFA322D24DD92F1002A4A08 /* L10n.swift in Sources */,
+				FAFEF41B24DFA11300CE388E /* Reusable.swift in Sources */,
 				FAC457E524DD8D9E002BA373 /* AppDelegate.swift in Sources */,
 				FA5E439024DE07C600DE31BC /* TransactionsWireframe.swift in Sources */,
 				FAC4580824DD8ED3002BA373 /* AccountsViewController.swift in Sources */,
 				FAFEF41824DE0B6500CE388E /* Double+Currency.swift in Sources */,
+				FAFEF41D24DFA12900CE388E /* NibLoadable.swift in Sources */,
 				FA5E438B24DE06F100DE31BC /* Transactions.swift in Sources */,
+				FAFEF42224DFA23C00CE388E /* TransactionCell.swift in Sources */,
 				FAC4580E24DD8F05002BA373 /* AccountsViewModel.swift in Sources */,
 				FAC4581124DD900F002BA373 /* Injectable.swift in Sources */,
 				FAC4581324DD9019002BA373 /* StoryboardInstantiable.swift in Sources */,
@@ -548,6 +583,7 @@
 				FAFA322C24DD92F1002A4A08 /* Storyboards.swift in Sources */,
 				FA5E438E24DE079D00DE31BC /* AccountsWireframe.swift in Sources */,
 				FA5E438924DE06EA00DE31BC /* Transaction.swift in Sources */,
+				FAFEF41F24DFA14700CE388E /* UITableView+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

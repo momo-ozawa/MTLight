@@ -12,6 +12,10 @@ import Foundation
 internal enum L10n {
   /// Balances
   internal static let balances = L10n.tr("Localizable", "Balances")
+  /// d
+  internal static let d = L10n.tr("Localizable", "d")
+  /// MMMM yyyy
+  internal static let mmmmYyyy = L10n.tr("Localizable", "MMMM yyyy")
   /// Total Balance
   internal static let totalBalance = L10n.tr("Localizable", "Total Balance")
 }

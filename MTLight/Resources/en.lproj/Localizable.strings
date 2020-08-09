@@ -3,3 +3,10 @@
 
 /* Header title for accounts table header view */
 "Total Balance" = "Total Balance";
+
+/* Formatted date for transaction item */
+"d" = "d";
+
+/* Formatted date for transaction section */
+"MMMM yyyy" = "MMMM yyyy";
+

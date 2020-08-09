@@ -9,12 +9,15 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import RxDataSources
+
+typealias TransactionSection = SectionModel<Date, Transaction>
 
 class TransactionsViewModel {
     
     private let disposeBag = DisposeBag()
 
-    let transactions: Driver<[Transaction]>
+    let transactions: Driver<[TransactionSection]>
     let transactionsError: Observable<MTError>
     
     init(
@@ -29,7 +32,15 @@ class TransactionsViewModel {
         
         transactions = result
             .compactMap { $0.element }
-            .map { $0.transactions.sorted { $0.date > $1.date } }
+            .map {
+                let transactions = $0.transactions
+                let dictionary = Dictionary(grouping: transactions, by: { $0.monthAndYear! })
+                let sections = dictionary.map {
+                    TransactionSection(model: $0.key, items: $0.value.sorted(by: >))
+                }
+                let sortedSections = sections.sorted { $0.model > $1.model }
+                return sortedSections
+            }
             .asDriver(onErrorJustReturn: [])
 
         transactionsError = result

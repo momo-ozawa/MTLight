@@ -16,10 +16,24 @@ struct Transaction: Decodable {
     let description: String
     let id: Int
     
+    var monthAndYear: Date? {
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.month, .year], from: date)
+        return calendar.date(from: components)
+    }
+
     var formattedDate: String {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM dd"
+        dateFormatter.dateFormat = L10n.d
         return dateFormatter.string(from: date)
+    }
+
+}
+
+extension Transaction: Comparable {
+    
+    static func < (lhs: Transaction, rhs: Transaction) -> Bool {
+        lhs.date < rhs.date
     }
 
 }

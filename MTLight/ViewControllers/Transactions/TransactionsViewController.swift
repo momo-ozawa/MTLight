@@ -19,6 +19,23 @@ final class TransactionsViewController: UIViewController {
     var dependency: Dependency!
 
     private let disposeBag = DisposeBag()
+    
+    private lazy var sectionDateFormatter: DateFormatter = {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = L10n.mmmmYyyy
+        return dateFormatter
+    }()
+    
+    private lazy var dataSource = RxTableViewSectionedReloadDataSource<TransactionSection>(
+        configureCell: { (_, tableView, indexPath, transaction) in
+            let cell = tableView.dequeueReusableCell(TransactionCell.self, for: indexPath)
+            cell.configure(with: transaction, currencyCode: self.dependency.account.currency)
+            return cell
+        },
+        titleForHeaderInSection: { dataSource, sectionIndex in
+            self.sectionDateFormatter.string(from: dataSource[sectionIndex].model)
+        }
+    )
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +52,14 @@ final class TransactionsViewController: UIViewController {
     
     func setupUI() {
         self.title = dependency.account.institution
+        tableView.register(TransactionCell.self)
     }
     
     func bindUI() {
         
         viewModel.transactions
-            .drive(
-                tableView.rx.items(cellIdentifier: "TransactionCell", cellType: UITableViewCell.self)
-            ) { (_, transaction, cell) in
-                cell.textLabel?.text = transaction.formattedDate
-                cell.detailTextLabel?.text = transaction.amount.toLocaleCurrency(currencyCode: self.dependency.account.currency)
-        }
-        .disposed(by: disposeBag)
+            .drive(tableView.rx.items(dataSource: dataSource))
+            .disposed(by: disposeBag)
         
         viewModel.transactionsError
             .subscribe(onNext: { [weak self] error in
