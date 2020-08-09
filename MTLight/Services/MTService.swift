@@ -11,7 +11,7 @@ import RxSwift
 
 protocol MTServiceProtocol {
     func getAccounts() -> Observable<Accounts>
-    func getTransactions(id: Int) -> Observable<Transactions>
+    func getTransactions(accountId: Int) -> Observable<Transactions>
 }
 
 enum MTError: Error {
@@ -38,8 +38,8 @@ class MTService: MTServiceProtocol {
         return loadJSON(forResource: "accounts")
     }
     
-    func getTransactions(id: Int) -> Observable<Transactions> {
-        return loadJSON(forResource: "transactions_\(id)")
+    func getTransactions(accountId: Int) -> Observable<Transactions> {
+        return loadJSON(forResource: "transactions_\(accountId)")
     }
     
     private func loadJSON<T>(forResource name: String) -> Observable<T> where T: Decodable {

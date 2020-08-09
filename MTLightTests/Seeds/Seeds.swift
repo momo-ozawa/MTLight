@@ -12,6 +12,7 @@ import XCTest
 enum Seeds {
     
     enum Accounts {
+    
         static let testAccount = Account(
              id: 0,
              nickname: "Test",
@@ -27,6 +28,7 @@ enum Seeds {
     }
     
     enum Transactions {
+
         static let testTransaction = Transaction(
             accountId: 0,
             amount: 10.0,

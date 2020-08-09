@@ -24,16 +24,19 @@ final class AccountsViewModelTests: XCTestCase {
         self.disposeBag = DisposeBag()
         self.scheduler = TestScheduler(initialClock: 0)
         
-        let accountSelectedTap: Signal<Account> = scheduler.createColdObservable([
-            Recorded.next(10, Seeds.Accounts.testAccount)
-        ]).asSignal(onErrorJustReturn: Seeds.Accounts.testAccount)
-        
+        // Setup mock service with test account
         let service = MockMTService(
             getAccountsMock: {
                 return Accounts(accounts: [Seeds.Accounts.testAccount])
             }
         )
         
+        // Simulate tap signal on test account
+        let accountSelectedTap: Signal<Account> = scheduler.createColdObservable([
+            Recorded.next(10, Seeds.Accounts.testAccount)
+        ]).asSignal(onErrorJustReturn: Seeds.Accounts.testAccount)
+        
+        // Setup view model
         self.viewModel = AccountsViewModel(
             accountSelectedTap: accountSelectedTap,
             service: service,

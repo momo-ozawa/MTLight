@@ -27,7 +27,7 @@ class TransactionsViewModel {
     ) {
         
         let result = service
-            .getTransactions(id: accountId)
+            .getTransactions(accountId: accountId)
             .materialize()
             .share(replay: 1)
         

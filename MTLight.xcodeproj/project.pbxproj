@@ -192,6 +192,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FA06631924DFEADC007BB6F4 /* ViewModelTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAFEF42D24DFAD8900CE388E /* AccountsViewModelTests.swift */,
+				FA06631324DFCD04007BB6F4 /* TransactionsViewModelTests.swift */,
+			);
+			path = ViewModelTests;
+			sourceTree = "<group>";
+		};
+		FA06631A24DFEAE6007BB6F4 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FAFEF43C24DFB27300CE388E /* MockMTLightService.swift */,
+				FAFEF43A24DFB21D00CE388E /* MockAccountsWireframe.swift */,
+				FA06631524DFCE7E007BB6F4 /* MockTransactionsWireframe.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FA06631B24DFEAF7007BB6F4 /* Seeds */ = {
+			isa = PBXGroup;
+			children = (
+				FA06631724DFD3EC007BB6F4 /* Seeds.swift */,
+			);
+			path = Seeds;
+			sourceTree = "<group>";
+		};
 		FA5E437624DDA22D00DE31BC /* json */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,12 +318,9 @@
 		FAC457FA24DD8D9E002BA373 /* MTLightTests */ = {
 			isa = PBXGroup;
 			children = (
-				FAFEF42D24DFAD8900CE388E /* AccountsViewModelTests.swift */,
-				FA06631324DFCD04007BB6F4 /* TransactionsViewModelTests.swift */,
-				FAFEF43C24DFB27300CE388E /* MockMTLightService.swift */,
-				FAFEF43A24DFB21D00CE388E /* MockAccountsWireframe.swift */,
-				FA06631524DFCE7E007BB6F4 /* MockTransactionsWireframe.swift */,
-				FA06631724DFD3EC007BB6F4 /* Seeds.swift */,
+				FA06631924DFEADC007BB6F4 /* ViewModelTests */,
+				FA06631A24DFEAE6007BB6F4 /* Mocks */,
+				FA06631B24DFEAF7007BB6F4 /* Seeds */,
 				FAC457FD24DD8D9E002BA373 /* Info.plist */,
 			);
 			path = MTLightTests;

@@ -27,8 +27,8 @@ final class MockMTService: MTServiceProtocol {
         return Observable.of(getAccountsMock())
     }
     
-    func getTransactions(id: Int) -> Observable<Transactions> {
-        return Observable.of(getTransactionsMock(id))
+    func getTransactions(accountId: Int) -> Observable<Transactions> {
+        return Observable.of(getTransactionsMock(accountId))
     }
 
 }

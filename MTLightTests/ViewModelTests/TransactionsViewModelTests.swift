@@ -24,14 +24,16 @@ final class TransactionsViewModelTests: XCTestCase {
         self.disposeBag = DisposeBag()
         self.scheduler = TestScheduler(initialClock: 0)
         
+        // Setup mock service with test transaction
         let service = MockMTService(
-            getTransactionsMock: { accountId in
+            getTransactionsMock: { _ in
                 return Transactions(transactions: [Seeds.Transactions.testTransaction])
             }
         )
         
+        // Setup view model
         self.viewModel = TransactionsViewModel(
-            accountId: 0,
+            accountId: 10,
             service: service,
             wireframe: MockTransactionsWireframe()
         )
