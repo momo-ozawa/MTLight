@@ -29,6 +29,7 @@ class AccountsViewModel {
         
         let result = service
             .getAccounts()
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .materialize()
             .share(replay: 1)
         

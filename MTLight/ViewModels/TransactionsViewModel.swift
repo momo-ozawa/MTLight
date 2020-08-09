@@ -28,6 +28,7 @@ class TransactionsViewModel {
         
         let result = service
             .getTransactions(accountId: accountId)
+            .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
             .materialize()
             .share(replay: 1)
         
