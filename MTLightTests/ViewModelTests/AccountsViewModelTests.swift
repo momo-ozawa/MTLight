@@ -31,45 +31,63 @@ final class AccountsViewModelTests: XCTestCase {
             }
         )
         
-        // Simulate tap signal on test account
-        let accountSelectedTap: Signal<Account> = scheduler.createColdObservable([
-            Recorded.next(10, Seeds.Accounts.testAccount)
-        ]).asSignal(onErrorJustReturn: Seeds.Accounts.testAccount)
-        
         // Setup view model
         self.viewModel = AccountsViewModel(
-            accountSelectedTap: accountSelectedTap,
+            accountSelectedTap: Signal.never(),
             service: service,
             wireframe: MockAccountsWireframe()
         )
     }
     
     func testTotalBalance() {
-        let totalBalanceObserver = scheduler.createObserver(String.self)
+        let observer = scheduler.createObserver(String.self)
+        
+        let totalBalanceExpectation = expectation(description: #function)
 
         viewModel.totalBalance
-            .asObservable()
-            .subscribe(totalBalanceObserver)
+            .drive(observer)
+            .disposed(by: disposeBag)
+        
+        viewModel.totalBalance
+            .drive(onCompleted: {
+                totalBalanceExpectation.fulfill()
+            })
             .disposed(by: disposeBag)
         
         scheduler.start()
-                
-        XCTAssertEqual(totalBalanceObserver.events.first, Recorded.next(0, "JPY\u{00a0}0"))
+        
+        let expected = Recorded.next(0, "JPY\u{00a0}0")
+        
+        waitForExpectations(timeout: 1.0) { error in
+            XCTAssertNil(error, "Error: \(error!.localizedDescription)")
+            XCTAssertEqual(observer.events.first, expected)
+        }
     }
     
     func testAccounts() {
-        let accountsObserver = scheduler.createObserver([AccountSection].self)
+        let observer = scheduler.createObserver([AccountSection].self)
+
+        let accountsExpectation = expectation(description: #function)
 
         viewModel.accounts
-            .asObservable()
-            .subscribe(accountsObserver)
+            .drive(observer)
+            .disposed(by: disposeBag)
+        
+        viewModel.accounts
+            .drive(onCompleted: {
+                accountsExpectation.fulfill()
+            })
             .disposed(by: disposeBag)
 
         scheduler.start()
 
         let section = Seeds.Accounts.getSection(from: Seeds.Accounts.testAccount)
+        let expected = Recorded.next(0, [section])
         
-        XCTAssertEqual(accountsObserver.events.first, Recorded.next(0, [section]))
+        waitForExpectations(timeout: 1.0) { error in
+            XCTAssertNil(error, "Error: \(error!.localizedDescription)")
+            XCTAssertEqual(observer.events.first, expected)
+        }
     }
 
 }

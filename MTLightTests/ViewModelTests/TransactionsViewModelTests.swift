@@ -40,18 +40,29 @@ final class TransactionsViewModelTests: XCTestCase {
     }
     
     func testTransactions() {
-        let transactionsObserver = scheduler.createObserver([TransactionSection].self)
+        let observer = scheduler.createObserver([TransactionSection].self)
+        
+        let transactionsExpectation = expectation(description: #function)
         
         viewModel.transactions
-            .asObservable()
-            .subscribe(transactionsObserver)
+            .drive(observer)
+            .disposed(by: disposeBag)
+        
+        viewModel.transactions
+            .drive(onCompleted: {
+                transactionsExpectation.fulfill()
+            })
             .disposed(by: disposeBag)
         
         scheduler.start()
         
         let section = Seeds.Transactions.getSection(from: Seeds.Transactions.testTransaction)
+        let expected = Recorded.next(0, [section])
         
-        XCTAssertEqual(transactionsObserver.events.first, Recorded.next(0, [section]))
+        waitForExpectations(timeout: 1.0) { error in
+            XCTAssertNil(error, "Error: \(error!.localizedDescription)")
+            XCTAssertEqual(observer.events.first, expected)
+        }
     }
 
 }
