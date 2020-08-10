@@ -1,6 +1,6 @@
 # MTLight
 
-A lightweight personal finance app that displays accounts and transactions built with RxSwift and MVVM architecture. Currently, all account and transaction data are loaded from local JSON files.
+A lightweight personal finance app built with RxSwift and MVVM architecture. Currently, all account and transaction data are loaded from local JSON files.
 
 ## Notes
 
