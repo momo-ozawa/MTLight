@@ -15,10 +15,10 @@ typealias TransactionSection = SectionModel<Date, Transaction>
 
 class TransactionsViewModel {
     
-    private let disposeBag = DisposeBag()
-
     let transactions: Driver<[TransactionSection]>
     let transactionsError: Driver<MTError>
+    
+    private let disposeBag = DisposeBag()
     
     init(
         accountId: Int,
